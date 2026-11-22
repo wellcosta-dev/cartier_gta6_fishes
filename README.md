@@ -2,33 +2,24 @@
 
 <img src="images/mahi_mahi.png" width="140" alt="Mahi-Mahi">
 
-# 🎣 cartier_gta6_fishes
+# cartier_gta6_fishes
 
-**GTA VI style fish icons for FiveM inventories**
+GTA VI style fish icons for FiveM inventories, by **Costa Cartier**.
 
-33 hand-crafted, transparent fish icons, ready to drop into **ox_inventory** and **qb-inventory**.
+![Icons](https://img.shields.io/badge/icons-33-0ea5e9?style=flat-square)
+![Format](https://img.shields.io/badge/format-PNG%20512×512-22c55e?style=flat-square)
+![ox_inventory](https://img.shields.io/badge/ox__inventory-supported-f97316?style=flat-square)
+![qb-inventory](https://img.shields.io/badge/qb--inventory-supported-a855f7?style=flat-square)
 
-![Icons](https://img.shields.io/badge/icons-33-0ea5e9?style=for-the-badge)
-![Format](https://img.shields.io/badge/format-PNG%20512×512-22c55e?style=for-the-badge)
-![ox_inventory](https://img.shields.io/badge/ox__inventory-ready-f97316?style=for-the-badge)
-![qb-inventory](https://img.shields.io/badge/qb--inventory-ready-a855f7?style=for-the-badge)
-
-[Preview](#-preview) · [ox_inventory](#-ox_inventory) · [qb-inventory](#-qb-inventory) · [Item list](#-item-list)
+[Preview](#preview) · [ox_inventory](#ox_inventory) · [qb-inventory](#qb-inventory) · [Item list](#item-list)
 
 </div>
 
----
+## About
 
-## ✨ Features
+33 fish icons as 512×512 PNGs with transparent backgrounds. Every file is named after its item, so the icons work without any renaming. Item definitions for ox_inventory and qb-inventory are included below.
 
-- 🐟 **33 unique fish** – freshwater, reef and deep sea species
-- 🖼️ **512×512 transparent PNG** – crisp on any resolution, only ~35 KB per icon
-- ⚡ **Copy-paste ready** – item definitions for both ox_inventory and qb-inventory
-- 🏷️ **Consistent naming** – file name = item name, no renaming needed
-
----
-
-## 🖼️ Preview
+## Preview
 
 <table>
 <tr><td align="center" width="25%"><img src="images/achigan.png" width="110" alt="Achigan"><br><sub><b>Achigan</b></sub><br><sub><code>achigan</code></sub></td><td align="center" width="25%"><img src="images/albacore_tuna.png" width="110" alt="Albacore Tuna"><br><sub><b>Albacore Tuna</b></sub><br><sub><code>albacore_tuna</code></sub></td><td align="center" width="25%"><img src="images/alligator_gar.png" width="110" alt="Alligator Gar"><br><sub><b>Alligator Gar</b></sub><br><sub><code>alligator_gar</code></sub></td><td align="center" width="25%"><img src="images/american_eel.png" width="110" alt="American Eel"><br><sub><b>American Eel</b></sub><br><sub><code>american_eel</code></sub></td></tr>
@@ -42,25 +33,14 @@
 <tr><td align="center" width="25%"><img src="images/yellow_tailed_snapper.png" width="110" alt="Yellow Tailed Snapper"><br><sub><b>Yellow Tailed Snapper</b></sub><br><sub><code>yellow_tailed_snapper</code></sub></td></tr>
 </table>
 
----
+## ox_inventory
 
-## 📦 ox_inventory
-
-**1. Copy the icons**
-
-Copy everything from [`images/`](images) into:
-
-```
-ox_inventory/web/images/
-```
-
-**2. Add the items**
-
-Open `ox_inventory/data/items.lua` and paste the entries below inside the `return { ... }` table.
-The same code is available as a file: [`ox_inventory/items.lua`](ox_inventory/items.lua).
+1. Copy the contents of [`images/`](images) into `ox_inventory/web/images/`.
+2. Open `ox_inventory/data/items.lua` and paste the entries below into the `return { ... }` table. The same code is in [`ox_inventory/items.lua`](ox_inventory/items.lua).
+3. Restart `ox_inventory`.
 
 <details>
-<summary><b>📋 Show ox_inventory items</b></summary>
+<summary><b>ox_inventory items</b></summary>
 
 ```lua
 	['achigan'] = {
@@ -330,27 +310,14 @@ The same code is available as a file: [`ox_inventory/items.lua`](ox_inventory/it
 
 </details>
 
-**3. Restart** `ox_inventory` (or the server). ✅
+## qb-inventory
 
----
-
-## 📦 qb-inventory
-
-**1. Copy the icons**
-
-Copy everything from [`images/`](images) into:
-
-```
-qb-inventory/html/images/
-```
-
-**2. Add the items**
-
-Open `qb-core/shared/items.lua` and paste the entries below inside the `QBShared.Items = { ... }` table.
-The same code is available as a file: [`qb-inventory/items.lua`](qb-inventory/items.lua).
+1. Copy the contents of [`images/`](images) into `qb-inventory/html/images/`.
+2. Open `qb-core/shared/items.lua` and paste the entries below into the `QBShared.Items = { ... }` table. The same code is in [`qb-inventory/items.lua`](qb-inventory/items.lua).
+3. Restart `qb-core` and `qb-inventory`.
 
 <details>
-<summary><b>📋 Show qb-inventory items</b></summary>
+<summary><b>qb-inventory items</b></summary>
 
 ```lua
     achigan                  = { name = 'achigan', label = 'Achigan', weight = 1800, type = 'item', image = 'achigan.png', unique = false, useable = false, shouldClose = true, description = 'A feisty freshwater black bass.' },
@@ -390,14 +357,10 @@ The same code is available as a file: [`qb-inventory/items.lua`](qb-inventory/it
 
 </details>
 
-**3. Restart** `qb-core` and `qb-inventory` (or the server). ✅
-
----
-
-## 📋 Item list
+## Item list
 
 <details>
-<summary><b>Show all 33 items</b></summary>
+<summary><b>All 33 items</b></summary>
 
 | Item | Label | Weight |
 |:--|:--|--:|
@@ -437,31 +400,22 @@ The same code is available as a file: [`qb-inventory/items.lua`](qb-inventory/it
 
 </details>
 
-> [!TIP]
-> Weights are in **grams**, and the descriptions are just suggestions. Change them to match your server's economy.
+Weights are in grams. Adjust weights and descriptions to fit your server.
 
----
-
-## 📁 Structure
+## Structure
 
 ```
 cartier_gta6_fishes/
-├── images/            # 33 × 512×512 transparent PNG icons
+├── images/            # 33 PNG icons, 512×512
 ├── ox_inventory/
-│   └── items.lua      # ox_inventory item definitions
+│   └── items.lua
 ├── qb-inventory/
-│   └── items.lua      # qb-core shared item definitions
+│   └── items.lua
 └── README.md
 ```
 
----
+## License
 
-<div align="center">
+Free to use on your FiveM server. Credit is appreciated. Please don't resell the icons.
 
-### 💎 Made by **Costa Cartier**
-
-Free to use on your FiveM server. Credit is appreciated, but please don't resell these icons.
-
-⭐ If you like this pack, give the repository a star!
-
-</div>
+Made by Costa Cartier.
